@@ -1,13 +1,12 @@
-natural_number = input("Введите целое число: ")
+natural_number = int(input("Введите целое число: "))
 
 i = 1
-max = int(natural_number[0])
-while i < len(natural_number):
-    if max < int(natural_number[i]):
-        max = int(natural_number[i])
-        i += 1
+max = natural_number % 10
+while natural_number == 0:
+    if max < natural_number % 10:
+        max = natural_namber % 10
+        natural_number = natural_number // 10
     else:
-        i += 1
+        natural_number = natural_number // 10
 
-print(f"Большее число: {max}")
-
+    print(f"Большее число: {max}")
